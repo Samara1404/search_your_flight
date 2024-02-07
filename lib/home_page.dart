@@ -50,8 +50,9 @@ class _HomePageState extends State<HomePage> {
           ]),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
+          padding: const EdgeInsets.all(15),
+          child: ListView(
+            
             children: [
               const Text('Be inspired', style: AppTextStyle.appstyle3),
               const SizedBox(height: 8),
@@ -64,7 +65,8 @@ class _HomePageState extends State<HomePage> {
                     labelText: 'Need help where to go?',
                     hintText: 'Find Great Destinations',
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10))),
+                      borderRadius: BorderRadius.circular(10),
+                    )),
               ),
               const SizedBox(height: 10),
               TextFormField(
@@ -81,12 +83,13 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 10),
               const Text('Explorer', style: AppTextStyle.appstyle3),
               const SizedBox(height: 10),
-              const Image(
-                image: AssetImage(
-                  '/b1.png',
-                ),
-              ),
-          
+             Row(
+                 
+                children: [
+                  Expanded(child: Image.asset('assets/b2 1.png')),
+                  Expanded(child: Image.asset('assets/b2 1.png')),
+                ],),
+        
             ],
           ),
         ),
